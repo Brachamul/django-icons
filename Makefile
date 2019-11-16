@@ -1,4 +1,4 @@
-.PHONY: clean test tox reformat publish docs build publish
+.PHONY: clean test tox reformat lint publish docs build publish
 
 clean:
 	rm -rf build dist *.egg-info
@@ -15,8 +15,12 @@ reformat:
 	isort -rc tests
 	isort -rc *.py
 	autoflake -ir *.py django_icons tests --remove-all-unused-imports
+	docformatter -ir --pre-summary-newline --wrap-summaries=0 --wrap-descriptions=0 *.py django_icons tests
 	black .
+
+lint:
 	flake8
+	pydocstyle --add-ignore=D1,D202,D301,D413 *.py django_icons/ tests/
 
 docs:
 	cd docs && sphinx-build -b html -d _build/doctrees . _build/html

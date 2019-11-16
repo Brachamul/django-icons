@@ -5,7 +5,7 @@ __version__ = "1.0.0"
 
 def icon(name, *args, **kwargs):
     """
-    Render an icon
+    Render an icon.
 
     **Parameters**:
 

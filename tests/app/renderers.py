@@ -3,7 +3,9 @@ from django_icons.renderers import BaseRenderer, ImageRenderer
 
 class CustomSvgRenderer(BaseRenderer):
     """
-    <svg class="svg-icon" viewBox="0 0 32 32"><use xlink:href="#icon-feather"></use></svg>
+    Custom renderer for SVG icons.
+
+    Example: <svg class="svg-icon" viewBox="0 0 32 32"><use xlink:href="#icon-feather"></use></svg>
     """
 
     def get_tag(self):
