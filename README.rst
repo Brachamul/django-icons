@@ -1,7 +1,7 @@
 django-icons
 ------------
 
-Icons for Django
+Icons for Django. Documentation: https://django-icons.readthedocs.io/
 
 .. image:: https://travis-ci.org/zostera/django-icons.svg?branch=master
     :target: https://travis-ci.org/zostera/django-icons
